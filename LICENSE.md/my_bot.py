@@ -17,7 +17,7 @@ this function. by https://www.daniweb.com/programming/software-development/code/
     os.execl(python, python, * sys.argv)
 
 client = discord.Client()
-
+TOKEN = os.environ.get('TOKEN', None)
 Bot_Owner = '385407187796623360'
 
 @client.event
@@ -87,4 +87,4 @@ async def on_message(message):
  
 
 
-client.run(process.env.BOT_TOKEN)
+client.run(TOKEN)
